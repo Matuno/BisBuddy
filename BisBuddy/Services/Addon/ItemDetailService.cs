@@ -296,7 +296,7 @@ namespace BisBuddy.Services.Addon
             var customSeString = usedInSeString(customTextNode, itemNameTwoLines);
 
             // update node text
-            customTextNode.SeString = customSeString;
+            customTextNode.String = customSeString;
         }
 
         protected override NodeBase initializeCustomNode(AtkResNode* parentNodePtr, AtkUnitBase* addon, HighlightColor color)
