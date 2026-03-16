@@ -89,6 +89,9 @@ namespace BisBuddy.Services.Addon.Containers
 
         private unsafe void updateAddonData()
         {
+            // ensure these are always called/cleared
+            dragDropComponentNodes.Clear();
+            neededItemColors.Clear();
             var tabIdx = getTabIndex();
             // not on a page with items
             if (tabIdx > maxTabIndex || tabIdx < 0) return;
