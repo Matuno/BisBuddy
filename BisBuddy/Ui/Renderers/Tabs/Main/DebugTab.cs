@@ -6,12 +6,12 @@ using BisBuddy.Ui.Renderers.Tabs.Debug;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
+using Dalamud.Interface.Windowing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Numerics;
-using static Dalamud.Interface.Windowing.Window;
 
 namespace BisBuddy.Ui.Renderers.Tabs.Main
 {

@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using ValueType = FFXIVClientStructs.FFXIV.Component.GUI.ValueType;
 
 namespace BisBuddy.Services.Addon
 {
@@ -153,11 +152,11 @@ namespace BisBuddy.Services.Addon
 
                 // ignore if the item name is null (page turning can deselect item)
                 if (
-                    itemNameSeString.Type != ValueType.String
-                    && itemNameSeString.Type != ValueType.ManagedString
+                    itemNameSeString.Type != AtkValueType.String
+                    && itemNameSeString.Type != AtkValueType.ManagedString
                     )
                 {
-                    if (itemNameSeString.Type != ValueType.Undefined)
+                    if (itemNameSeString.Type != AtkValueType.Undefined)
                     {
                         logger.Warning($"Unexpected \"{AddonName}\" item name type \"{itemNameSeString.Type}\"");
                     }
@@ -211,11 +210,11 @@ namespace BisBuddy.Services.Addon
                     var itemName = addon->AtkValues[itemIdx];
 
                     if (
-                        itemName.Type != ValueType.String
-                        && itemName.Type != ValueType.ManagedString
+                        itemName.Type != AtkValueType.String
+                        && itemName.Type != AtkValueType.ManagedString
                         )
                     {
-                        if (itemName.Type != ValueType.Undefined)
+                        if (itemName.Type != AtkValueType.Undefined)
                         {
                             logger.Warning($"Unexpected {AddonName} name type: {itemName.Type}");
                         }

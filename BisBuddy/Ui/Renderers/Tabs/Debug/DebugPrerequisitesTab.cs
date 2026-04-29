@@ -6,10 +6,10 @@ using Dalamud.Interface;
 using Dalamud.Interface.Components;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
+using Dalamud.Interface.Windowing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static Dalamud.Interface.Windowing.Window;
 using ItemRelation = (
     uint TargetItemId,
     string SourceName,

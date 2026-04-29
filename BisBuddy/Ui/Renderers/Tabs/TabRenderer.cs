@@ -1,5 +1,5 @@
+using Dalamud.Interface.Windowing;
 using System;
-using static Dalamud.Interface.Windowing.Window;
 
 namespace BisBuddy.Ui.Renderers.Tabs
 {

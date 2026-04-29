@@ -11,6 +11,7 @@ using Dalamud.Interface;
 using Dalamud.Interface.Components;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
+using Dalamud.Interface.Windowing;
 using Dalamud.Plugin.Services;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.ColorSpaces.Companding;
@@ -19,7 +20,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Numerics;
-using static Dalamud.Interface.Windowing.Window;
 
 namespace BisBuddy.Ui.Renderers.Tabs.Main;
 

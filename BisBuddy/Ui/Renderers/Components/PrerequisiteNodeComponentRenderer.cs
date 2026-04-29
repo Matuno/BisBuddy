@@ -103,18 +103,12 @@ public class PrerequisiteNodeComponentRenderer(
 
             var tabName = $"Source {i + 1} ({prereqNode.SourceType})";
 
-            // dont look at this
-            Func<ImRaii.IEndObject> tabActiveStatusFunc;
-            if (prereqIsActive)
-                tabActiveStatusFunc = ImRaii.Enabled;
-            else
-                tabActiveStatusFunc = ImRaii.Disabled;
-
             using (ImRaii.PushId(i))
             using (ImRaii.PushColor(ImGuiCol.Text, textColor))
             {
                 using (ImRaii.PushStyle(ImGuiStyleVar.DisabledAlpha, 0.5f, !prereqIsActive))
-                using (tabActiveStatusFunc())
+                using (ImRaii.Enabled())
+                using (ImRaii.Disabled(!prereqIsActive))
                 using (var tabItem = ImRaii.TabItem($"{tabName}##or_node_tab_item_{i}", flags))
                 {
                     if (!prereqIsActive && ImGui.IsItemHovered(ImGuiHoveredFlags.AllowWhenDisabled))

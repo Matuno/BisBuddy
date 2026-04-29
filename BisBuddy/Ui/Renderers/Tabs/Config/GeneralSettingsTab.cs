@@ -2,9 +2,9 @@ using BisBuddy.Resources;
 using BisBuddy.Services.Configuration;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Utility.Raii;
+using Dalamud.Interface.Windowing;
 using System;
 using System.Numerics;
-using static Dalamud.Interface.Windowing.Window;
 
 namespace BisBuddy.Ui.Renderers.Tabs.Config
 {

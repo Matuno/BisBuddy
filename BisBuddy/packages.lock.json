@@ -26,9 +26,9 @@
       },
       "DalamudPackager": {
         "type": "Direct",
-        "requested": "[14.0.2, )",
-        "resolved": "14.0.2",
-        "contentHash": "dQJeq+8eyHzra4Cg5eZ/3LAeS3/UpvvLriYJGSncMK9LqJ7Q4B6jwcOsxo3PfxVd15xj+IzVFxkPqIBmPQu8/w=="
+        "requested": "[15.0.0, )",
+        "resolved": "15.0.0",
+        "contentHash": "411vwC8/X8Z/sQ2TI6v3SvOn66xFPeOjFn3Zn+h0d3Ox2t1kFm66AhDvmx/qcMwVrR+Hidxj0dadpQ2dgyXMBQ=="
       },
       "DotNet.ReproducibleBuilds": {
         "type": "Direct",
@@ -70,8 +70,8 @@
       "LuminaSupplemental.Excel": {
         "type": "Direct",
         "requested": "[*, )",
-        "resolved": "4.2.1",
-        "contentHash": "U6SyxbITCefBqq+jzdWd6BDGO68zh55hewEqfxpdSMjxUC6q0162AmF75FbbN8zkSJA6/jiyyl1bQeQRIQRxzg==",
+        "resolved": "4.2.4",
+        "contentHash": "eF9vRWo6R+XFh8C01HOW95WKxd0Es3pcOmWcg5YcT+oQb6fpmRFzg/3Z4XcMxuZdNhFJmVzOjPd8CT2pVwNC+A==",
         "dependencies": {
           "CSVFile": "3.2.1",
           "CsvHelper": "30.0.1",

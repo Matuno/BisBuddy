@@ -9,7 +9,6 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using ComponentNode = BisBuddy.Util.ComponentNode;
-using ValueType = FFXIVClientStructs.FFXIV.Component.GUI.ValueType;
 
 namespace BisBuddy.Services.Addon.ShopExchange
 {
@@ -140,9 +139,9 @@ namespace BisBuddy.Services.Addon.ShopExchange
             var endOfItemIdList = atkValues[maxItemIndex];
             var endOfItemFilteredList = atkValues[AtkValueFilteredItemsListStartingIndex + shopItemCount];
             if (
-                endOfItemIdList.Type == ValueType.UInt // has another value at the end
+                endOfItemIdList.Type == AtkValueType.UInt // has another value at the end
                 && endOfItemIdList.UInt > 0             // shield at the end
-                && endOfItemFilteredList.Type == ValueType.UInt // visibility value for shield
+                && endOfItemFilteredList.Type == AtkValueType.UInt // visibility value for shield
                 && endOfItemFilteredList.UInt <= AtkValueFilteredItemsListVisibleMaxValue // is visible
                 && itemDataService.ItemIsShield(endOfItemIdList.UInt) // item is a shield
                 )
@@ -163,7 +162,7 @@ namespace BisBuddy.Services.Addon.ShopExchange
             for (var i = 0; i < atkValues[AtkValueItemCountIndex].Int; i++)
             {
                 var itemIdAtkValue = atkValues[AtkValueItemIdListStartingIndex + i];
-                if (itemIdAtkValue.Type != ValueType.UInt)
+                if (itemIdAtkValue.Type != AtkValueType.UInt)
                 {
                     throw new Exception($"Item id at index {i}/{AtkValueItemIdListStartingIndex + i} is a {itemIdAtkValue.Type}, not a UInt");
                 }
@@ -211,7 +210,7 @@ namespace BisBuddy.Services.Addon.ShopExchange
             for (var i = 0; i <= itemCount.Int; i++)
             {
                 var value = atkValues[i + AtkValueFilteredItemsListStartingIndex];
-                if (value.Type != ValueType.UInt)
+                if (value.Type != AtkValueType.UInt)
                 {
                     logger.Error($"Filter list item type \"{value.Type}\" unexpected at index {i}/{AtkValueFilteredItemsListStartingIndex + i}");
                     return -1;

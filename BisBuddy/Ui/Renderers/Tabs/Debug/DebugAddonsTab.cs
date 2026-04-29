@@ -6,11 +6,11 @@ using Dalamud.Interface;
 using Dalamud.Interface.Components;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
+using Dalamud.Interface.Windowing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using static Dalamud.Interface.Windowing.Window;
 using AddonTableColumns = System.Collections.Generic.List<(
     string Name,
     System.Action<string> Init,
